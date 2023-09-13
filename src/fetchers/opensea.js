@@ -104,7 +104,6 @@ const getOSData = async (api, chainId, contract, tokenId, slug) => {
       !isOSTestnet(chainId) ? process.env.OPENSEA_BASE_URL_ALT || url : url,
       { headers }
     );
-
     switch (api) {
       case "events":
         // Fallback to offers API if we get a collection from the wrong chain
@@ -234,7 +233,6 @@ export const fetchCollection = async (chainId, { contract, tokenId }) => {
         });
       }
     }
-
     return {
       id: contract,
       slug: data.collection.slug,
@@ -244,6 +242,7 @@ export const fetchCollection = async (chainId, { contract, tokenId }) => {
       openseaRoyalties: royalties,
       openseaFees: fees,
       contract,
+      tokenURI: data.token_metadata,
       tokenIdRange: null,
       tokenSetId: `contract:${contract}`,
       paymentTokens: data.collection.payment_tokens

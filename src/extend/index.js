@@ -32,6 +32,7 @@ import * as shreddingSassy from "./shredding-sassy";
 import * as soundxyz from "./soundxyz";
 import * as tfoust from "./tfoust";
 import * as utopiaAvatars from "./utopia-avatars";
+import * as superrareShared from "./superrare-shared"
 
 export const hasExtendHandler = (chainId, contract) => Boolean(extend[`${chainId},${contract}`]);
 
@@ -98,7 +99,7 @@ extendCollection["1,0xb66a603f4cfe17e3d27b87a8bfcad319856518b8"] = sharedContrac
 extendCollection["5,0x7c4b13b5893cd82f371c5e28f12fb2f37542bbc5"] = sharedContracts;
 
 // Superrare
-extendCollection["1,0xb932a70a57673d89f4acffbe830e8ed7f75fb9e0"] = sharedContracts;
+//extendCollection["1,0xb932a70a57673d89f4acffbe830e8ed7f75fb9e0"] = sharedContracts;
 
 // Foundation
 extendCollection["1,0x3b3ee1931dc30c1957379fac9aba94d1c48a5405"] = sharedContracts;
@@ -154,6 +155,8 @@ soundxyz.SoundxyzReleaseContracts.forEach(
 );
 extendCollection["5,0xbe8f3dfce2fcbb6dd08a7e8109958355785c968b"] = soundxyz;
 
+//superrare shared
+extendCollection["1,0xb932a70a57673d89f4acffbe830e8ed7f75fb9e0"] = superrareShared
 const extend = {};
 
 // Opensea Shared Contract
@@ -280,3 +283,6 @@ extend["1,0x11708dc8a3ea69020f520c81250abb191b190110"] = cryptokicksIrl;
 
 // Utopia Avatars
 extend["1,0x5f076e995290f3f9aea85fdd06d8fae118f2b75c"] = utopiaAvatars;
+
+//SuperRare
+extend["1,0xb932a70a57673d89f4acffbe830e8ed7f75fb9e0"] = superrareShared
